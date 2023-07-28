@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My E-Library</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav {
+  background-color: #333;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+
+.menu-btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+}
+
+.hamburger {
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Hamburger Menu Animation */
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked + .menu-btn .hamburger {
+  transform: rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-btn .hamburger:before,
+#menu-toggle:checked + .menu-btn .hamburger:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu-toggle:checked ~ .menu {
+  max-height: 300px; /* Adjust the height based on the number of menu items */
+}
+
+    .container {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .book {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .book-item {
+      width: 250px;
+      background-color: #fff;
+      border-radius: 4px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-item img {
+      max-width: 100%;
+      border-radius: 4px;
+    }
+
+    .book-item h3 {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .book-item p {
+      text-align: center;
+    }
+
+    footer {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My E-Library</h1>
+    <p></p>
+  </header>
+  <nav>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-btn">
+      <span class="hamburger"></span>
+    </label>
+    <ul class="menu">
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="book"method="post">
+      <div class="book-item">
+        <img src="book1.jpg" alt="Book 1">
+        <h3>Book 1</h3>
+        <p>Author Name</p>
+      </div>
+      <div class="book-item">
+        <img src="book2.jpg" alt="Book 2">
+        <h3>Book 2</h3>
+        <p>Author Name</p>
+      </div>
+      <!-- Add more book items as needed -->
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 My E-Library. All rights reserved.</p>
+  </footer>
+</body>
+</html>
